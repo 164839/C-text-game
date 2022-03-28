@@ -1,0 +1,221 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Horrorgame
+{
+    class Program
+    {
+    
+        static void Main(string[] args)
+        {
+            Part1();
+
+        }
+
+        static void Part1()
+        {
+            string choice;
+
+           
+            Console.WriteLine("it's early morning and raining heavily outside");
+            Console.WriteLine("Would you like to wake up?");
+            Console.Write("Choice: ");
+            choice = Console.ReadLine().ToLower();
+            Console.Clear();
+
+            
+
+            switch (choice)
+            {
+                case "1":
+                case "yes":
+                
+                    {
+                        Console.WriteLine("you get up and start changing clothes");
+                        Console.ReadLine();
+                        part2();
+                        break;
+
+
+
+
+
+                    }
+
+
+
+
+
+
+            }
+
+
+        }
+
+        static void part2()
+        {
+            string choice;
+
+            Console.WriteLine("you put some clothes on, you wen't down to the kitchen you started making a nice sandwitch until you see a strange tall black shadow out of the corner of your eye");
+            Console.WriteLine("Grab a knife and explore it? - engage ");
+            Console.WriteLine("or ignore it - ignore" );
+            choice = Console.ReadLine().ToLower();
+            Console.Clear();
+
+            switch (choice)
+            {
+                case "1":
+                    case "engage":
+
+                    {
+                        Console.WriteLine("you go to the attic where you saw the shadow");
+                        Console.ReadLine();
+                        part3();
+                        break;
+
+
+
+
+                    }
+
+                case "2":
+                    case "ignore":
+
+                    {
+                        
+                        lose();
+                        break;
+
+                    }
+
+            }
+
+
+        }
+
+        static void lose()
+        {
+            Console.WriteLine("The shadow later chases you down and you were never seen again");
+
+        }
+
+        static void part3()
+        {
+            string choice;
+
+            Console.WriteLine("Would you like to fight the monster? - fight ");
+            Console.WriteLine("or run away in fear - run");
+            choice = Console.ReadLine().ToLower();
+            Console.Clear();
+
+            switch (choice)
+            {
+                case "1":
+                case "fight":
+
+                    {
+                        Console.WriteLine("You Fight the monster and manage to defeat it. It falls on the floor and vanishes after getting hit once.");
+                        Console.ReadLine();
+                        Win();
+                        break;
+
+
+
+
+                    }
+
+                case "2":
+                case "run":
+
+                    {
+
+                        lose();
+                        break;
+
+                    }
+
+                case "3":
+                case "":
+                    {
+                        Console.WriteLine("The monster stare's into your soul");
+                        Console.WriteLine("he goes close to you and acts almost like a pet");
+                        Console.WriteLine("you decide to keep him in your attack as a 'pet' ");
+                        Console.ReadLine();
+                        Secret();
+                        break;
+                    }
+
+            }
+
+
+
+
+
+        }
+
+        static void Win()
+        {
+            Console.WriteLine("YOU WIN! thanks for playing!");
+        }
+
+        static void Secret()
+        {
+            string choice;
+
+            Console.WriteLine("Months later, the police were checking for a monster invading the world");
+            Console.WriteLine("The police finally reach your door and ask if you have seen anything of it");
+            Console.WriteLine("Do you lie and say you haven't seen anything (the true ending) - lie");
+            Console.WriteLine("or do you say the truth (the bad ending) - truth");
+            choice = Console.ReadLine().ToLower();
+            Console.Clear();
+
+            switch (choice)
+            {
+                case "1":
+                case "truth":
+
+                    {
+                        Console.WriteLine("you get taken to a containment facility with the shadow");
+                        Console.WriteLine("the monster manages to sneak to your exiled room and killes you and takes over the world");
+                        
+                        
+                        break;
+
+
+
+
+                    }
+
+                case "2":
+                case "lie":
+
+                    {
+                        Console.WriteLine("you lie and the police don't find out and you keep the shadow as your pet");
+                        Console.WriteLine("The shadow monster asks you if you want to capture the world with him by awakening you");
+                        Console.WriteLine("you say yes and capture the world...");
+                        Console.ReadLine();
+                        
+
+
+
+                        
+                        break;
+
+                    }
+
+                  
+
+            }
+
+        }
+
+
+
+
+
+
+    }
+    }
+
